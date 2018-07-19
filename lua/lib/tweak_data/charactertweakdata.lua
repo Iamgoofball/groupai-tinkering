@@ -15613,189 +15613,38 @@ function CharacterTweakData:_multiply_weapon_delay(weap_usage_table, mul)
 end
 
 function CharacterTweakData:_multiply_all_hp(hp_mul, hs_mul)
-	self.fbi.HEALTH_INIT = self.fbi.HEALTH_INIT * hp_mul
-	self.swat.HEALTH_INIT = self.swat.HEALTH_INIT * hp_mul
-	self.heavy_swat.HEALTH_INIT = self.heavy_swat.HEALTH_INIT * hp_mul
-	self.fbi_heavy_swat.HEALTH_INIT = self.fbi_heavy_swat.HEALTH_INIT * hp_mul
-	self.sniper.HEALTH_INIT = self.sniper.HEALTH_INIT * hp_mul
-	self.gangster.HEALTH_INIT = self.gangster.HEALTH_INIT * hp_mul
-	self.biker.HEALTH_INIT = self.biker.HEALTH_INIT * hp_mul
-	self.tank.HEALTH_INIT = self.tank.HEALTH_INIT * hp_mul
-	self.tank_mini.HEALTH_INIT = self.tank_mini.HEALTH_INIT * hp_mul
-	self.tank_medic.HEALTH_INIT = self.tank_medic.HEALTH_INIT * hp_mul
-	self.spooc.HEALTH_INIT = self.spooc.HEALTH_INIT * hp_mul
-	self.shield.HEALTH_INIT = self.shield.HEALTH_INIT * hp_mul
-	self.phalanx_minion.HEALTH_INIT = self.phalanx_minion.HEALTH_INIT * hp_mul
-	self.phalanx_vip.HEALTH_INIT = self.phalanx_vip.HEALTH_INIT * hp_mul
-	self.taser.HEALTH_INIT = self.taser.HEALTH_INIT * hp_mul
-	self.city_swat.HEALTH_INIT = self.city_swat.HEALTH_INIT * hp_mul
-	self.biker_escape.HEALTH_INIT = self.biker_escape.HEALTH_INIT * hp_mul
-	self.fbi_swat.HEALTH_INIT = self.fbi_swat.HEALTH_INIT * hp_mul
-	self.tank_hw.HEALTH_INIT = self.tank_hw.HEALTH_INIT * hp_mul
-	self.medic.HEALTH_INIT = self.medic.HEALTH_INIT * hp_mul
-	self.bolivian.HEALTH_INIT = self.bolivian.HEALTH_INIT * hp_mul
-	self.bolivian_indoors.HEALTH_INIT = self.bolivian_indoors.HEALTH_INIT * hp_mul
-	self.drug_lord_boss.HEALTH_INIT = self.drug_lord_boss.HEALTH_INIT * hp_mul
-	self.drug_lord_boss_stealth.HEALTH_INIT = self.drug_lord_boss_stealth.HEALTH_INIT * hp_mul
-
-	if self.security.headshot_dmg_mul then
-		self.security.headshot_dmg_mul = self.security.headshot_dmg_mul * hs_mul
-	end
-
-	if self.cop.headshot_dmg_mul then
-		self.cop.headshot_dmg_mul = self.cop.headshot_dmg_mul * hs_mul
-	end
-
-	if self.fbi.headshot_dmg_mul then
-		self.fbi.headshot_dmg_mul = self.fbi.headshot_dmg_mul * hs_mul
-	end
-
-	if self.swat.headshot_dmg_mul then
-		self.swat.headshot_dmg_mul = self.swat.headshot_dmg_mul * hs_mul
-	end
-
-	if self.heavy_swat.headshot_dmg_mul then
-		self.heavy_swat.headshot_dmg_mul = self.heavy_swat.headshot_dmg_mul * hs_mul
-	end
-
-	if self.fbi_heavy_swat.headshot_dmg_mul then
-		self.fbi_heavy_swat.headshot_dmg_mul = self.fbi_heavy_swat.headshot_dmg_mul * hs_mul
-	end
-
-	if self.sniper.headshot_dmg_mul then
-		self.sniper.headshot_dmg_mul = self.sniper.headshot_dmg_mul * hs_mul
-	end
-
-	if self.gangster.headshot_dmg_mul then
-		self.gangster.headshot_dmg_mul = self.gangster.headshot_dmg_mul * hs_mul
-	end
-
-	if self.biker.headshot_dmg_mul then
-		self.biker.headshot_dmg_mul = self.biker.headshot_dmg_mul * hs_mul
-	end
-
-	if self.tank.headshot_dmg_mul then
-		self.tank.headshot_dmg_mul = self.tank.headshot_dmg_mul * hs_mul
-	end
-
-	if self.spooc.headshot_dmg_mul then
-		self.spooc.headshot_dmg_mul = self.spooc.headshot_dmg_mul * hs_mul
-	end
-
-	if self.shield.headshot_dmg_mul then
-		self.shield.headshot_dmg_mul = self.shield.headshot_dmg_mul * hs_mul
-	end
-
-	if self.phalanx_minion.headshot_dmg_mul then
-		self.phalanx_minion.headshot_dmg_mul = self.phalanx_minion.headshot_dmg_mul * hs_mul
-	end
-
-	if self.phalanx_vip.headshot_dmg_mul then
-		self.phalanx_vip.headshot_dmg_mul = self.phalanx_vip.headshot_dmg_mul * hs_mul
-	end
-
-	if self.taser.headshot_dmg_mul then
-		self.taser.headshot_dmg_mul = self.taser.headshot_dmg_mul * hs_mul
-	end
-
-	if self.biker_escape.headshot_dmg_mul then
-		self.biker_escape.headshot_dmg_mul = self.biker_escape.headshot_dmg_mul * hs_mul
-	end
-
-	if self.city_swat.headshot_dmg_mul then
-		self.city_swat.headshot_dmg_mul = self.city_swat.headshot_dmg_mul * hs_mul
-	end
-
-	if self.fbi_swat.headshot_dmg_mul then
-		self.fbi_swat.headshot_dmg_mul = self.fbi_swat.headshot_dmg_mul * hs_mul
-	end
-
-	if self.tank_hw.headshot_dmg_mul then
-		self.tank_hw.headshot_dmg_mul = self.tank_hw.headshot_dmg_mul * hs_mul
-	end
-
-	if self.medic.headshot_dmg_mul then
-		self.medic.headshot_dmg_mul = self.medic.headshot_dmg_mul * hs_mul
-	end
-
-	if self.drug_lord_boss.headshot_dmg_mul then
-		self.drug_lord_boss.headshot_dmg_mul = self.drug_lord_boss.headshot_dmg_mul * hs_mul
-	end
-
-	if self.bolivian.headshot_dmg_mul then
-		self.bolivian.headshot_dmg_mul = self.bolivian.headshot_dmg_mul * hs_mul
-	end
-
-	if self.bolivian_indoors.headshot_dmg_mul then
-		self.bolivian_indoors.headshot_dmg_mul = self.bolivian_indoors.headshot_dmg_mul * hs_mul
-	end
-
-	if self.tank_medic.headshot_dmg_mul then
-		self.tank_medic.headshot_dmg_mul = self.tank_medic.headshot_dmg_mul * hs_mul
-	end
-
-	if self.tank_mini.headshot_dmg_mul then
-		self.tank_mini.headshot_dmg_mul = self.tank_mini.headshot_dmg_mul * hs_mul
+	for k, v in pairs(self._enemy_list) do
+		if self[v] then
+			if self[v].HEALTH_INIT and not self[v].ignore_health_multiplication then
+				self[v].HEALTH_INIT = self[v].HEALTH_INIT * hp_mul
+			end
+			if self[v].headshot_dmg_mul and not self[v].ignore_headshot_multiplication then
+				self[v].headshot_dmg_mul = self[v].headshot_dmg_mul * hs_mul]
+			end
+		end
 	end
 end
 
 function CharacterTweakData:_multiply_all_speeds(walk_mul, run_mul)
-	local all_units = {
-		"security",
-		"cop",
-		"fbi",
-		"swat",
-		"heavy_swat",
-		"sniper",
-		"gangster",
-		"tank",
-		"spooc",
-		"shield",
-		"taser",
-		"city_swat",
-		"fbi_swat"
-	}
-
-	table.insert(all_units, "bolivian")
-	table.insert(all_units, "bolivian_indoors")
-
-	for _, name in ipairs(all_units) do
-		local speed_table = self[name].SPEED_WALK
-		speed_table.hos = speed_table.hos * walk_mul
-		speed_table.cbt = speed_table.cbt * walk_mul
+	for k, v in pairs(self._enemy_list) do
+		if self[v] then
+			if self[v].SPEED_RUN and not self[v].ignore_runspeed_multiplication then
+				self[v].SPEED_RUN = self[v].SPEED_RUN * run_mul
+			end
+			if self[v].SPEED_WALK and not self[v].ignore_walkspeed_multiplication then
+				local speed_table = self[v].SPEED_WALK
+				speed_table.hos = speed_table.hos * walk_mul
+				speed_table.cbt = speed_table.cbt * walk_mul
+			end
+		end
 	end
-
-	self.security.SPEED_RUN = self.security.SPEED_RUN * run_mul
-	self.cop.SPEED_RUN = self.cop.SPEED_RUN * run_mul
-	self.fbi.SPEED_RUN = self.fbi.SPEED_RUN * run_mul
-	self.swat.SPEED_RUN = self.swat.SPEED_RUN * run_mul
-	self.heavy_swat.SPEED_RUN = self.heavy_swat.SPEED_RUN * run_mul
-	self.fbi_heavy_swat.SPEED_RUN = self.fbi_heavy_swat.SPEED_RUN * run_mul
-	self.sniper.SPEED_RUN = self.sniper.SPEED_RUN * run_mul
-	self.gangster.SPEED_RUN = self.gangster.SPEED_RUN * run_mul
-	self.biker.SPEED_RUN = self.biker.SPEED_RUN * run_mul
-	self.tank.SPEED_RUN = self.tank.SPEED_RUN * run_mul
-	self.spooc.SPEED_RUN = self.spooc.SPEED_RUN * run_mul
-	self.shield.SPEED_RUN = self.shield.SPEED_RUN * run_mul
-	self.taser.SPEED_RUN = self.taser.SPEED_RUN * run_mul
-	self.city_swat.SPEED_RUN = self.city_swat.SPEED_RUN * run_mul
-	self.biker_escape.SPEED_RUN = self.biker_escape.SPEED_RUN * run_mul
-	self.fbi_swat.SPEED_RUN = self.fbi_swat.SPEED_RUN * run_mul
 end
 
 function CharacterTweakData:_set_characters_weapon_preset(preset)
-	local all_units = {
-		"security",
-		"cop",
-		"fbi",
-		"swat",
-		"heavy_swat",
-		"gangster",
-		"swat"
-	}
-
-	for _, name in ipairs(all_units) do
-		self[name].weapon = self.presets.weapon[preset]
+	for k, v in pairs(self._enemy_list) do
+		if self[v] and not self[v].custom_weapon_preset then
+			self[v].weapon = self.presets.weapon[preset]
+		end
 	end
 end
 
