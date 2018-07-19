@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<mod name="groupaitinker" global_key="groupaitinker">
+	<:include src="hooks.xml" />
+</mod>
